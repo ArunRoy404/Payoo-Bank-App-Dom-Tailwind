@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo</title>
+
+    <!-- daisyUI with tailwind  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- outfit font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- icon  -->
+    <link rel="shortcut icon" href="assets/payoo.png" type="image/x-icon">
+    <style>
+        .font-outfit {
+            font-family: "Outfit", serif;
+        }
+    </style>
+
+</head>
+
+<body class="font-outfit max-w-md bg-[#F4F5F7] mx-auto">
+
+    <header>
+        <nav class="bg-white flex justify-between items-center py-4 px-3 border-b-2">
+            <div class="flex items-center">
+                <div>
+                    <img class="w-14 pr-2" src="assets/Group.png" alt="">
+                </div>
+                <div>
+                    <h1 class="text-black text-3xl font-bold">$<span>45000</span></h1>
+                    <p>Available Balance</p>
+                </div>
+            </div>
+            <button class="border-[2px] rounded-xl px-3"><svg class="inline w-7" xmlns="http://www.w3.org/2000/svg"
+                    x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
+                    <path
+                        d="M 11.5 6 C 8.4802259 6 6 8.4802259 6 11.5 L 6 36.5 C 6 39.519774 8.4802259 42 11.5 42 L 29.5 42 C 32.519774 42 35 39.519774 35 36.5 A 1.50015 1.50015 0 1 0 32 36.5 C 32 37.898226 30.898226 39 29.5 39 L 11.5 39 C 10.101774 39 9 37.898226 9 36.5 L 9 11.5 C 9 10.101774 10.101774 9 11.5 9 L 29.5 9 C 30.898226 9 32 10.101774 32 11.5 A 1.50015 1.50015 0 1 0 35 11.5 C 35 8.4802259 32.519774 6 29.5 6 L 11.5 6 z M 33.484375 15.484375 A 1.50015 1.50015 0 0 0 32.439453 18.060547 L 36.878906 22.5 L 15.5 22.5 A 1.50015 1.50015 0 1 0 15.5 25.5 L 36.878906 25.5 L 32.439453 29.939453 A 1.50015 1.50015 0 1 0 34.560547 32.060547 L 41.560547 25.060547 A 1.50015 1.50015 0 0 0 41.560547 22.939453 L 34.560547 15.939453 A 1.50015 1.50015 0 0 0 33.484375 15.484375 z">
+                    </path>
+                </svg>
+                Log Out
+            </button>
+        </nav>
+    </header>
+
+
+    <main class="mx-auto space-y-3">
+        <div class="bg-white p-5 space-y-5">
+            <h1 class="text-2xl text-black font-bold">🔥Welcome to Payoo!</h1>
+            <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+
+            <!-- transaction cards  -->
+            <div class="grid grid-cols-3 gap-4">
+                <!-- card 1  -->
+                <div class="py-4 flex flex-col items-center justify-center border-2 rounded-xl">
+                    <div>
+                        <img src="assets/wallet1.png" alt="">
+                    </div>
+                    <p>Add Money</p>
+                </div>
+
+                <!-- card 1  -->
+                <div class="py-4 flex flex-col items-center justify-center border-2 rounded-xl">
+                    <div>
+                        <img src="assets/send1.png" alt="">
+                    </div>
+                    <p>Cash Out</p>
+                </div>
+
+                <!-- card 1  -->
+                <div class="py-4  flex flex-col items-center justify-center border-2 rounded-xl">
+                    <div>
+                        <img src="assets/money1.png" alt="">
+                    </div>
+                    <p>Transfer Money</p>
+                </div>
+
+                <!-- card 1  -->
+                <div class="py-4  flex flex-col items-center justify-center border-2 rounded-xl">
+                    <div>
+                        <img src="assets/bonus1.png" alt="">
+                    </div>
+                    <p>Get Bonus</p>
+                </div>
+
+
+                <!-- card 1  -->
+                <div class="py-4  flex flex-col items-center justify-center border-2 rounded-xl">
+                    <div>
+                        <img src="assets/purse1.png" alt="">
+                    </div>
+                    <p>Pay Bill</p>
+                </div>
+
+
+                <!-- card 1  -->
+                <div class="py-4  flex flex-col items-center justify-center border-2 rounded-xl">
+                    <div>
+                        <img src="assets/transaction1.png" alt="">
+                    </div>
+                    <p>transactions</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- payment history  -->
+        <div class="text-black p-5 space-y-4 hidden">
+            <div class="flex items-center justify-between">
+                <h1 class="text-xl font-bold">Latest Payment</h1>
+                <p class="text-[#08080880] font-semibold"><a href="">View All</a></p>
+            </div>
+
+            <!-- card 1  -->
+            <div class="flex items-center justify-between bg-white border-2 rounded-xl px-4 py-3">
+                <div class="flex items-center">
+                    <div>
+                        <img class="p-3 mr-2 bg-[#F4F5F7] rounded-full" src="assets/wallet1.png" alt="">
+                    </div>
+                    <div>
+                        <h1>Electricity Bill</h1>
+                        <p>Today 01:44 AM</p>
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+
+            </div>
+
+            <!-- card 2  -->
+            <div class="flex items-center justify-between bg-white border-2 rounded-xl px-4 py-3">
+                <div class="flex items-center">
+                    <div>
+                        <img class="p-3 mr-2 bg-[#F4F5F7] rounded-full" src="assets/wallet1.png" alt="">
+                    </div>
+                    <div>
+                        <h1>Electricity Bill</h1>
+                        <p>Today 01:44 AM</p>
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+
+            </div>
+
+            <!-- card 3  -->
+            <div class="flex items-center justify-between bg-white border-2 rounded-xl px-4 py-3">
+                <div class="flex items-center">
+                    <div>
+                        <img class="p-3 mr-2 bg-[#F4F5F7] rounded-full" src="assets/wallet1.png" alt="">
+                    </div>
+                    <div>
+                        <h1>Electricity Bill</h1>
+                        <p>Today 01:44 AM</p>
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+
+            </div>
+
+            <!-- card 4  -->
+            <div class="flex items-center justify-between bg-white border-2 rounded-xl px-4 py-3">
+                <div class="flex items-center">
+                    <div>
+                        <img class="p-3 mr-2 bg-[#F4F5F7] rounded-full" src="assets/wallet1.png" alt="">
+                    </div>
+                    <div>
+                        <h1>Electricity Bill</h1>
+                        <p>Today 01:44 AM</p>
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+
+            </div>
+        </div>
+
+
+        <!-- Add Money Section  -->
+        <div class="text-black px-5">
+            <h1 class="text-xl font-bold">Add Money</h1>
+            
+            <div class="w-full shrink-0 shadow-2xl rounded-xl">
+                <form class="py-4 px-7 space-y-3">
+                    <div class="form-control">
+                        <label>
+                            <span>Mobile Number</span>
+                        </label>
+                        <input type="number" placeholder="Enter Your Number" class="input bg-white" required />
+                    </div>
+                    <div class="form-control">
+                        <label >Pin</span>
+                        </label>
+                        <input type="Number" placeholder="Enter 4 Digit Pin" class="input bg-white input-bordered"
+                            required />
+                    </div>
+                    <div class="form-control">
+                        <label >
+                            <span>Mobile Number</span>
+                        </label>
+                        <input type="number" placeholder="Enter Your Number" class="input bg-white" required />
+                    </div>
+                    <div class="form-control">
+                        <label >Pin</span>
+                        </label>
+                        <input type="Number" placeholder="Enter 4 Digit Pin" class="input bg-white input-bordered"
+                            required />
+                    </div>
+                    <div class="form-control ">
+                        <button class="btn btn-primary text-white">Add Money</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>
