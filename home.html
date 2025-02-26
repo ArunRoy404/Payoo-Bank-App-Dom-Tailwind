@@ -34,7 +34,7 @@
                     <img class="w-14 pr-2" src="assets/Group.png" alt="">
                 </div>
                 <div>
-                    <h1 class="text-black text-3xl font-bold">$<span>45000</span></h1>
+                    <h1 class="text-black text-3xl font-bold">$<span id="balance">45000</span></h1>
                     <p>Available Balance</p>
                 </div>
             </div>
@@ -112,6 +112,8 @@
 
         <!-- container  -->
         <div id="container">
+
+
             <!-- Add Money Section  -->
             <div id="add-money" class="text-black px-5 pb-5">
                 <h1 class="text-xl font-bold">Add Money</h1>
@@ -124,18 +126,17 @@
                             <label>
                                 <span>Select A Bank</span>
                             </label>
-                            <select class="select select-bordered w-full bg-white">
-                                <option selected disabled>Select Bank</option>
-                                <option>Bkash</option>
-                                <option>Nogod</option>
-                                <option>Rocket</option>
+                            <select id="bank" class="select select-bordered w-full bg-white">
+                                <option value="Bkash">Bkash</option>
+                                <option value="Nogod">Nogod</option>
+                                <option value="Rocket">Rocket</option>
                             </select>
                         </div>
 
                         <!-- account number  -->
                         <div class="form-control">
                             <label>Bank Account Number</span>
-                                <input type="number" placeholder="Enter 11 digits of Account number"
+                                <input id="bank-account" type="number" placeholder="Enter 11 digits of Account number"
                                     class="input bg-white w-full" required />
                         </div>
 
@@ -144,18 +145,18 @@
                             <label>
                                 <span>Amount to Add</span>
                             </label>
-                            <input type="number" placeholder="Enter Amount" class="input bg-white" required />
+                            <input id="add-money-amount" type="number" placeholder="Enter Amount" class="input bg-white" required />
                         </div>
 
                         <!-- pin number  -->
                         <div class="form-control">
                             <label>Pin Number</span>
                             </label>
-                            <input type="Number" placeholder="Enter 4 Digit Pin" class="input bg-white input-bordered"
+                            <input id="add-money-pin" type="Number" placeholder="Enter 4 Digit Pin" class="input bg-white input-bordered"
                                 required />
                         </div>
                         <div class="form-control ">
-                            <button class="btn btn-primary text-white">Add Money</button>
+                            <button id="add-money-btn" class="btn btn-primary text-white">Add Money</button>
                         </div>
                     </form>
                 </div>
@@ -275,7 +276,6 @@
                                 <span>Select To Pay</span>
                             </label>
                             <select class="select select-bordered w-full bg-white">
-                                <option disabled selected>Select</option>
                                 <option>Electric</option>
                                 <option>Water</option>
                                 <option>Gas</option>
@@ -336,65 +336,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                     </svg>
+                </div> 
 
-                </div>
-
-                <!-- card 2  -->
-                <div class="flex items-center justify-between bg-white border-2 rounded-xl px-4 py-3">
-                    <div class="flex items-center">
-                        <div>
-                            <img class="p-3 mr-2 bg-[#F4F5F7] rounded-full" src="assets/wallet1.png" alt="">
-                        </div>
-                        <div>
-                            <h1>Electricity Bill</h1>
-                            <p>Today 01:44 AM</p>
-                        </div>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                    </svg>
-
-                </div>
-
-                <!-- card 3  -->
-                <div class="flex items-center justify-between bg-white border-2 rounded-xl px-4 py-3">
-                    <div class="flex items-center">
-                        <div>
-                            <img class="p-3 mr-2 bg-[#F4F5F7] rounded-full" src="assets/wallet1.png" alt="">
-                        </div>
-                        <div>
-                            <h1>Electricity Bill</h1>
-                            <p>Today 01:44 AM</p>
-                        </div>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                    </svg>
-
-                </div>
-
-                <!-- card 4  -->
-                <div class="flex items-center justify-between bg-white border-2 rounded-xl px-4 py-3">
-                    <div class="flex items-center">
-                        <div>
-                            <img class="p-3 mr-2 bg-[#F4F5F7] rounded-full" src="assets/wallet1.png" alt="">
-                        </div>
-                        <div>
-                            <h1>Electricity Bill</h1>
-                            <p>Today 01:44 AM</p>
-                        </div>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                    </svg>
-
-                </div>
             </div>
         </div>
 
