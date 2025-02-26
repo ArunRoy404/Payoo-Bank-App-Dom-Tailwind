@@ -26,7 +26,7 @@
 </head>
 
 <body class="font-outfit">
-    <main class="max-w-md bg-[#F4F5F7] h-lvh mx-auto flex-col items-center pt-40">
+    <main class="max-w-md bg-[#F4F5F7] min-h-svh mx-auto flex-col items-center pt-40">
         <!-- logo  -->
         <!-- <div class="relative p-12">
             <img class="absolute left-1/2 top-0 -translate-x-1/2" src="assets/bg.png" alt="">
@@ -46,25 +46,32 @@
                             <label class="label">
                                 <span class="label-text text-black">Mobile Number</span>
                             </label>
-                            <input type="number" placeholder="Enter Your Number" class="input bg-white"
+
+                            <!-- account number  -->
+                            <input id="account-number" value="12365478963" type="number" placeholder="Enter Your Number" class="input bg-white"
                                 required />
                         </div>
                         <div class="form-control">
                             <label class="label text-black">Pin</span>
                             </label>
-                            <input type="Number" placeholder="Enter 4 Digit Pin" class="input bg-white input-bordered"
+
+                            <!-- pin  -->
+                            <input id="pin" type="Number" value="1234" placeholder="Enter 4 Digit Pin" class="input bg-white input-bordered"
                                 required />
                             <label class="label">
                                 <a href="#" class="text-black label-text-alt link link-hover">Forgot password?</a>
                             </label>
                         </div>
                         <div class="form-control mt-6">
-                            <button class="btn btn-primary text-white">Login</button>
+                            <button id="login-btn" class="btn btn-primary text-white">Login</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
+        
+        <script src="utilities/functions.js"></script>
+        <script src="scripts/login.js"></script>
     </main>
 </body>
 

@@ -38,7 +38,7 @@
                     <p>Available Balance</p>
                 </div>
             </div>
-            <button class="border-[2px] rounded-xl px-3"><svg class="inline w-7" xmlns="http://www.w3.org/2000/svg"
+            <button id="logout" class="border-[2px] rounded-xl px-3"><svg class="inline w-7" xmlns="http://www.w3.org/2000/svg"
                     x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
                     <path
                         d="M 11.5 6 C 8.4802259 6 6 8.4802259 6 11.5 L 6 36.5 C 6 39.519774 8.4802259 42 11.5 42 L 29.5 42 C 32.519774 42 35 39.519774 35 36.5 A 1.50015 1.50015 0 1 0 32 36.5 C 32 37.898226 30.898226 39 29.5 39 L 11.5 39 C 10.101774 39 9 37.898226 9 36.5 L 9 11.5 C 9 10.101774 10.101774 9 11.5 9 L 29.5 9 C 30.898226 9 32 10.101774 32 11.5 A 1.50015 1.50015 0 1 0 35 11.5 C 35 8.4802259 32.519774 6 29.5 6 L 11.5 6 z M 33.484375 15.484375 A 1.50015 1.50015 0 0 0 32.439453 18.060547 L 36.878906 22.5 L 15.5 22.5 A 1.50015 1.50015 0 1 0 15.5 25.5 L 36.878906 25.5 L 32.439453 29.939453 A 1.50015 1.50015 0 1 0 34.560547 32.060547 L 41.560547 25.060547 A 1.50015 1.50015 0 0 0 41.560547 22.939453 L 34.560547 15.939453 A 1.50015 1.50015 0 0 0 33.484375 15.484375 z">
@@ -50,39 +50,39 @@
     </header>
 
 
-    <main class="mx-auto space-y-3 min-h-lvh">
+    <main class="mx-auto space-y-3 min-h-svh">
         <div class="bg-white p-5 space-y-5">
             <h1 class="text-2xl text-black font-bold">🔥Welcome to Payoo!</h1>
             <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
 
             <!-- transaction cards  -->
-            <div class="grid grid-cols-3 gap-4">
+            <div id="card-container" class="grid grid-cols-3 gap-4">
                 <!-- card 1  -->
-                <div class="py-4 flex flex-col items-center justify-center border-2 rounded-xl">
+                <div id="select-add-money" class="cursor-pointer py-4 flex flex-col items-center justify-center border-2 rounded-xl">
                     <div>
                         <img src="assets/wallet1.png" alt="">
                     </div>
                     <p>Add Money</p>
                 </div>
 
-                <!-- card 1  -->
-                <div class="py-4 flex flex-col items-center justify-center border-2 rounded-xl">
+                <!-- card 2  -->
+                <div id="select-cash-out" class="cursor-pointer py-4 flex flex-col items-center justify-center border-2 rounded-xl">
                     <div>
                         <img src="assets/send1.png" alt="">
                     </div>
                     <p>Cash Out</p>
                 </div>
 
-                <!-- card 1  -->
-                <div class="py-4  flex flex-col items-center justify-center border-2 rounded-xl">
+                <!-- card 3  -->
+                <div id="select-transfer-money" class="cursor-pointer py-4  flex flex-col items-center justify-center border-2 rounded-xl">
                     <div>
                         <img src="assets/money1.png" alt="">
                     </div>
                     <p>Transfer Money</p>
                 </div>
 
-                <!-- card 1  -->
-                <div class="py-4  flex flex-col items-center justify-center border-2 rounded-xl">
+                <!-- card 4  -->
+                <div id="select-get-bonus" class="cursor-pointer py-4  flex flex-col items-center justify-center border-2 rounded-xl">
                     <div>
                         <img src="assets/bonus1.png" alt="">
                     </div>
@@ -90,8 +90,8 @@
                 </div>
 
 
-                <!-- card 1  -->
-                <div class="py-4  flex flex-col items-center justify-center border-2 rounded-xl">
+                <!-- card 5  -->
+                <div id="select-pay-bill" class="cursor-pointer py-4  flex flex-col items-center justify-center border-2 rounded-xl">
                     <div>
                         <img src="assets/purse1.png" alt="">
                     </div>
@@ -99,8 +99,8 @@
                 </div>
 
 
-                <!-- card 1  -->
-                <div class="py-4  flex flex-col items-center justify-center border-2 rounded-xl">
+                <!-- card 6  -->
+                <div id="select-transaction" class="cursor-pointer py-4  flex flex-col items-center justify-center border-2 rounded-xl">
                     <div>
                         <img src="assets/transaction1.png" alt="">
                     </div>
@@ -109,282 +109,307 @@
             </div>
         </div>
 
-        
-        <!-- Add Money Section  -->
-        <div class="text-black px-5 pb-5">
-            <h1 class="text-xl font-bold">Add Money</h1>
 
-            <div class="w-full shrink-0 shadow-2xl rounded-xl">
-                <form class="py-4 px-7 space-y-3 text-[#080808B3]">
+        <!-- container  -->
+        <div id="container">
+            <!-- Add Money Section  -->
+            <div id="add-money" class="text-black px-5 pb-5">
+                <h1 class="text-xl font-bold">Add Money</h1>
 
-                    <!-- bank selection  -->
-                    <div class="form-control">
-                        <label>
-                            <span>Select A Bank</span>
-                        </label>
-                        <select class="select select-bordered w-full bg-white">
-                            <option selected disabled>Select Bank</option>
-                            <option>Bkash</option>
-                            <option>Nogod</option>
-                            <option>Rocket</option>
-                        </select>
-                    </div>
+                <div class="w-full shrink-0 shadow-2xl rounded-xl">
+                    <form class="py-4 px-7 space-y-3 text-[#080808B3]">
 
-                    <!-- account number  -->
-                    <div class="form-control">
-                        <label>Bank Account Number</span>
-                        <input type="number" placeholder="Enter 11 digits of Account number" class="input bg-white w-full" required />
-                    </div>
+                        <!-- bank selection  -->
+                        <div class="form-control">
+                            <label>
+                                <span>Select A Bank</span>
+                            </label>
+                            <select class="select select-bordered w-full bg-white">
+                                <option selected disabled>Select Bank</option>
+                                <option>Bkash</option>
+                                <option>Nogod</option>
+                                <option>Rocket</option>
+                            </select>
+                        </div>
 
-                    <!-- ammount  -->
-                    <div class="form-control">
-                        <label>
-                            <span>Amount to Add</span>
-                        </label>
-                        <input type="number" placeholder="Enter Amount" class="input bg-white" required />
-                    </div>
+                        <!-- account number  -->
+                        <div class="form-control">
+                            <label>Bank Account Number</span>
+                                <input type="number" placeholder="Enter 11 digits of Account number"
+                                    class="input bg-white w-full" required />
+                        </div>
 
-                    <!-- pin number  -->
-                    <div class="form-control">
-                        <label>Pin Number</span>
-                        </label>
-                        <input type="Number" placeholder="Enter 4 Digit Pin" class="input bg-white input-bordered"
-                            required />
-                    </div>
-                    <div class="form-control ">
-                        <button class="btn btn-primary text-white">Add Money</button>
-                    </div>
-                </form>
-            </div>
+                        <!-- ammount  -->
+                        <div class="form-control">
+                            <label>
+                                <span>Amount to Add</span>
+                            </label>
+                            <input type="number" placeholder="Enter Amount" class="input bg-white" required />
+                        </div>
 
-        </div>
-
-
-        <!-- Cash Out Section  -->
-        <div class="text-black px-5 pb-5">
-            <h1 class="text-xl font-bold">Cash Out</h1>
-
-            <div class="w-full shrink-0 shadow-2xl rounded-xl">
-                <form class="py-4 px-7 space-y-3 text-[#080808B3]">
-
-                    <!-- agent account number  -->
-                    <div class="form-control">
-                        <label>Agent Account Number</span>
-                        <input type="number" placeholder="Enter 11 digits of Account number" class="input bg-white w-full" required />
-                    </div>
-
-                    <!-- amount   -->
-                    <div class="form-control">
-                        <label>
-                            <span>Amount</span>
-                        </label>
-                        <input type="number" placeholder="Enter Amount" class="input bg-white" required />
-                    </div>
-
-                    <!-- pin  -->
-                    <div class="form-control">
-                        <label>Pin Number</span>
-                        </label>
-                        <input type="Number" placeholder="Enter 4 Digit Pin" class="input bg-white input-bordered"
-                            required />
-                    </div>
-                    <div class="form-control ">
-                        <button class="btn btn-primary text-white">Withdraw Money</button>
-                    </div>
-                </form>
-            </div>
-
-        </div>
-
-
-        <!-- Transfer Money Section  -->
-        <div class="text-black px-5 pb-5">
-            <h1 class="text-xl font-bold">Transfer Money</h1>
-
-            <div class="w-full shrink-0 shadow-2xl rounded-xl">
-                <form class="py-4 px-7 space-y-3 text-[#080808B3]">
-
-                    <!-- user account number  -->
-                    <div class="form-control">
-                        <label>User Account Number</span>
-                        <input type="number" placeholder="Enter 11 digits of Account number" class="input bg-white w-full" required />
-                    </div>
-
-                    <!-- amount   -->
-                    <div class="form-control">
-                        <label>
-                            <span>Amount</span>
-                        </label>
-                        <input type="number" placeholder="Enter Amount" class="input bg-white" required />
-                    </div>
-
-                    <!-- pin  -->
-                    <div class="form-control">
-                        <label>Pin Number</span>
-                        </label>
-                        <input type="Number" placeholder="Enter 4 Digit Pin" class="input bg-white input-bordered"
-                            required />
-                    </div>
-                    <div class="form-control ">
-                        <button class="btn btn-primary text-white">Send Money</button>
-                    </div>
-                </form>
-            </div>
-
-        </div>
-
-
-        <!-- Get Bonus Section  -->
-        <div class="text-black px-5 pb-5">
-            <h1 class="text-xl font-bold">Transfer Money</h1>
-
-            <div class="w-full shrink-0 shadow-2xl rounded-xl">
-                <form class="py-4 px-7 space-y-3 text-[#080808B3]">
-
-                    <!-- Coupon  -->
-                    <div class="form-control">
-                        <label>Enter Bonus Coupon</span>
-                        <input type="number" placeholder="Enter Bonus Coupon" class="input bg-white w-full" required />
-                    </div>
-
-                    
-                    <div class="form-control ">
-                        <button class="btn btn-primary text-white">Get Bonus</button>
-                    </div>
-                </form>
-            </div>
-
-        </div>
-
-        <!-- Pay Bill Section  -->
-        <div class="text-black px-5 pb-5">
-            <h1 class="text-xl font-bold">Pay Bill</h1>
-
-            <div class="w-full shrink-0 shadow-2xl rounded-xl">
-                <form class="py-4 px-7 space-y-3 text-[#080808B3]">
-
-                    <!-- Pay selection  -->
-                    <div class="form-control">
-                        <label>
-                            <span>Select To Pay</span>
-                        </label>
-                        <select class="select select-bordered w-full bg-white">
-                            <option disabled selected>Select</option>
-                            <option>Electric</option>
-                            <option>Water</option>
-                            <option>Gas</option>
-                        </select>
-                    </div>
-
-                    <!-- Biller account number  -->
-                    <div class="form-control">
-                        <label>Biller Account Number</span>
-                        <input type="number" placeholder="Enter 11 digits of Account number" class="input bg-white w-full" required />
-                    </div>
-
-                    <!-- ammount  -->
-                    <div class="form-control">
-                        <label>
-                            <span>Amount to Pay</span>
-                        </label>
-                        <input type="number" placeholder="Enter Amount" class="input bg-white" required />
-                    </div>
-
-                    <!-- pin number  -->
-                    <div class="form-control">
-                        <label>Pin Number</span>
-                        </label>
-                        <input type="Number" placeholder="Enter 4 Digit Pin" class="input bg-white input-bordered"
-                            required />
-                    </div>
-                    <div class="form-control ">
-                        <button class="btn btn-primary text-white">Add Money</button>
-                    </div>
-                </form>
-            </div>
-
-        </div>
-
-
-        <!-- Transaction Section  -->
-        <div class="text-black p-5 space-y-4">
-            <div class="flex items-center justify-between">
-                <h1 class="text-xl font-bold">Transaction History</h1>
-                <p class="text-[#08080880] font-semibold"><a href="">View All</a></p>
-            </div>
-
-            <!-- card 1  -->
-            <div class="flex items-center justify-between bg-white border-2 rounded-xl px-4 py-3">
-                <div class="flex items-center">
-                    <div>
-                        <img class="p-3 mr-2 bg-[#F4F5F7] rounded-full" src="assets/wallet1.png" alt="">
-                    </div>
-                    <div>
-                        <h1>Electricity Bill</h1>
-                        <p>Today 01:44 AM</p>
-                    </div>
+                        <!-- pin number  -->
+                        <div class="form-control">
+                            <label>Pin Number</span>
+                            </label>
+                            <input type="Number" placeholder="Enter 4 Digit Pin" class="input bg-white input-bordered"
+                                required />
+                        </div>
+                        <div class="form-control ">
+                            <button class="btn btn-primary text-white">Add Money</button>
+                        </div>
+                    </form>
                 </div>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                </svg>
 
             </div>
 
-            <!-- card 2  -->
-            <div class="flex items-center justify-between bg-white border-2 rounded-xl px-4 py-3">
-                <div class="flex items-center">
-                    <div>
-                        <img class="p-3 mr-2 bg-[#F4F5F7] rounded-full" src="assets/wallet1.png" alt="">
-                    </div>
-                    <div>
-                        <h1>Electricity Bill</h1>
-                        <p>Today 01:44 AM</p>
-                    </div>
+
+            <!-- Cash Out Section  -->
+            <div id="cash-out" class="text-black px-5 pb-5">
+                <h1 class="text-xl font-bold">Cash Out</h1>
+
+                <div class="w-full shrink-0 shadow-2xl rounded-xl">
+                    <form class="py-4 px-7 space-y-3 text-[#080808B3]">
+
+                        <!-- agent account number  -->
+                        <div class="form-control">
+                            <label>Agent Account Number</span>
+                                <input type="number" placeholder="Enter 11 digits of Account number"
+                                    class="input bg-white w-full" required />
+                        </div>
+
+                        <!-- amount   -->
+                        <div class="form-control">
+                            <label>
+                                <span>Amount</span>
+                            </label>
+                            <input type="number" placeholder="Enter Amount" class="input bg-white" required />
+                        </div>
+
+                        <!-- pin  -->
+                        <div class="form-control">
+                            <label>Pin Number</span>
+                            </label>
+                            <input type="Number" placeholder="Enter 4 Digit Pin" class="input bg-white input-bordered"
+                                required />
+                        </div>
+                        <div class="form-control ">
+                            <button class="btn btn-primary text-white">Withdraw Money</button>
+                        </div>
+                    </form>
                 </div>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                </svg>
 
             </div>
 
-            <!-- card 3  -->
-            <div class="flex items-center justify-between bg-white border-2 rounded-xl px-4 py-3">
-                <div class="flex items-center">
-                    <div>
-                        <img class="p-3 mr-2 bg-[#F4F5F7] rounded-full" src="assets/wallet1.png" alt="">
-                    </div>
-                    <div>
-                        <h1>Electricity Bill</h1>
-                        <p>Today 01:44 AM</p>
-                    </div>
+
+            <!-- Transfer Money Section  -->
+            <div id="transfer-money" class="text-black px-5 pb-5">
+                <h1 class="text-xl font-bold">Transfer Money</h1>
+
+                <div class="w-full shrink-0 shadow-2xl rounded-xl">
+                    <form class="py-4 px-7 space-y-3 text-[#080808B3]">
+
+                        <!-- user account number  -->
+                        <div class="form-control">
+                            <label>User Account Number</span>
+                                <input type="number" placeholder="Enter 11 digits of Account number"
+                                    class="input bg-white w-full" required />
+                        </div>
+
+                        <!-- amount   -->
+                        <div class="form-control">
+                            <label>
+                                <span>Amount</span>
+                            </label>
+                            <input type="number" placeholder="Enter Amount" class="input bg-white" required />
+                        </div>
+
+                        <!-- pin  -->
+                        <div class="form-control">
+                            <label>Pin Number</span>
+                            </label>
+                            <input type="Number" placeholder="Enter 4 Digit Pin" class="input bg-white input-bordered"
+                                required />
+                        </div>
+                        <div class="form-control ">
+                            <button class="btn btn-primary text-white">Send Money</button>
+                        </div>
+                    </form>
                 </div>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                </svg>
 
             </div>
 
-            <!-- card 4  -->
-            <div class="flex items-center justify-between bg-white border-2 rounded-xl px-4 py-3">
-                <div class="flex items-center">
-                    <div>
-                        <img class="p-3 mr-2 bg-[#F4F5F7] rounded-full" src="assets/wallet1.png" alt="">
-                    </div>
-                    <div>
-                        <h1>Electricity Bill</h1>
-                        <p>Today 01:44 AM</p>
-                    </div>
-                </div>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                </svg>
 
+            <!-- Get Bonus Section  -->
+            <div id="get-bonus" class="text-black px-5 pb-5">
+                <h1 class="text-xl font-bold">Get Bonus</h1>
+
+                <div class="w-full shrink-0 shadow-2xl rounded-xl">
+                    <form class="py-4 px-7 space-y-3 text-[#080808B3]">
+
+                        <!-- Coupon  -->
+                        <div class="form-control">
+                            <label>Enter Bonus Coupon</span>
+                                <input type="number" placeholder="Enter Bonus Coupon" class="input bg-white w-full"
+                                    required />
+                        </div>
+
+
+                        <div class="form-control ">
+                            <button class="btn btn-primary text-white">Get Bonus</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Pay Bill Section  -->
+            <div id="pay-bill" class="text-black px-5 pb-5">
+                <h1 class="text-xl font-bold">Pay Bill</h1>
+
+                <div class="w-full shrink-0 shadow-2xl rounded-xl">
+                    <form class="py-4 px-7 space-y-3 text-[#080808B3]">
+
+                        <!-- Pay selection  -->
+                        <div class="form-control">
+                            <label>
+                                <span>Select To Pay</span>
+                            </label>
+                            <select class="select select-bordered w-full bg-white">
+                                <option disabled selected>Select</option>
+                                <option>Electric</option>
+                                <option>Water</option>
+                                <option>Gas</option>
+                            </select>
+                        </div>
+
+                        <!-- Biller account number  -->
+                        <div class="form-control">
+                            <label>Biller Account Number</span>
+                                <input type="number" placeholder="Enter 11 digits of Account number"
+                                    class="input bg-white w-full" required />
+                        </div>
+
+                        <!-- ammount  -->
+                        <div class="form-control">
+                            <label>
+                                <span>Amount to Pay</span>
+                            </label>
+                            <input type="number" placeholder="Enter Amount" class="input bg-white" required />
+                        </div>
+
+                        <!-- pin number  -->
+                        <div class="form-control">
+                            <label>Pin Number</span>
+                            </label>
+                            <input type="Number" placeholder="Enter 4 Digit Pin" class="input bg-white input-bordered"
+                                required />
+                        </div>
+                        <div class="form-control ">
+                            <button class="btn btn-primary text-white">Add Money</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+
+            <!-- Transaction Section  -->
+            <div id="transaction" class="text-black p-5 space-y-4">
+                <div class="flex items-center justify-between">
+                    <h1 class="text-xl font-bold">Transaction History</h1>
+                    <p class="text-[#08080880] font-semibold"><a href="">View All</a></p>
+                </div>
+
+                <!-- card 1  -->
+                <div class="flex items-center justify-between bg-white border-2 rounded-xl px-4 py-3">
+                    <div class="flex items-center">
+                        <div>
+                            <img class="p-3 mr-2 bg-[#F4F5F7] rounded-full" src="assets/wallet1.png" alt="">
+                        </div>
+                        <div>
+                            <h1>Electricity Bill</h1>
+                            <p>Today 01:44 AM</p>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                    </svg>
+
+                </div>
+
+                <!-- card 2  -->
+                <div class="flex items-center justify-between bg-white border-2 rounded-xl px-4 py-3">
+                    <div class="flex items-center">
+                        <div>
+                            <img class="p-3 mr-2 bg-[#F4F5F7] rounded-full" src="assets/wallet1.png" alt="">
+                        </div>
+                        <div>
+                            <h1>Electricity Bill</h1>
+                            <p>Today 01:44 AM</p>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                    </svg>
+
+                </div>
+
+                <!-- card 3  -->
+                <div class="flex items-center justify-between bg-white border-2 rounded-xl px-4 py-3">
+                    <div class="flex items-center">
+                        <div>
+                            <img class="p-3 mr-2 bg-[#F4F5F7] rounded-full" src="assets/wallet1.png" alt="">
+                        </div>
+                        <div>
+                            <h1>Electricity Bill</h1>
+                            <p>Today 01:44 AM</p>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                    </svg>
+
+                </div>
+
+                <!-- card 4  -->
+                <div class="flex items-center justify-between bg-white border-2 rounded-xl px-4 py-3">
+                    <div class="flex items-center">
+                        <div>
+                            <img class="p-3 mr-2 bg-[#F4F5F7] rounded-full" src="assets/wallet1.png" alt="">
+                        </div>
+                        <div>
+                            <h1>Electricity Bill</h1>
+                            <p>Today 01:44 AM</p>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                    </svg>
+
+                </div>
             </div>
         </div>
+
+
+        <script src="utilities/functions.js"></script>
+        <script src="utilities/toggle.js"></script>
+        <script src="scripts/logout.js"></script>
+        <script src="scripts/section.js"></script>
+        <script src="scripts/addMoney.js"></script>
+        <script src="scripts/cashOut.js"></script>
+        <script src="scripts/transfarMoney.js"></script>
+        <script src="scripts/getBonus.js"></script>
+        <script src="scripts/payBill.js"></script>
+        <script src="scripts/transacion.js"></script>
     </main>
 </body>
+
 </html>
