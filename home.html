@@ -193,29 +193,31 @@
         <!-- Add Money Section  -->
         <div class="text-black px-5">
             <h1 class="text-xl font-bold">Add Money</h1>
-            
+
             <div class="w-full shrink-0 shadow-2xl rounded-xl">
-                <form class="py-4 px-7 space-y-3">
+                <form class="py-4 px-7 space-y-3 text-[#080808B3]">
                     <div class="form-control">
                         <label>
-                            <span>Mobile Number</span>
+                            <span>Select A Bank</span>
                         </label>
-                        <input type="number" placeholder="Enter Your Number" class="input bg-white" required />
+                        <select class="select select-bordered w-full bg-white">
+                            <option>Bkash</option>
+                            <option>Nogod</option>
+                            <option>Rocket</option>
+                        </select>
                     </div>
                     <div class="form-control">
-                        <label >Pin</span>
-                        </label>
-                        <input type="Number" placeholder="Enter 4 Digit Pin" class="input bg-white input-bordered"
-                            required />
+                        <label>Bank Account Number</span>
+                        <input type="number" placeholder="Enter 11 digits of Account number" class="input bg-white w-full" required />
                     </div>
                     <div class="form-control">
-                        <label >
-                            <span>Mobile Number</span>
+                        <label>
+                            <span>Amount to Add</span>
                         </label>
-                        <input type="number" placeholder="Enter Your Number" class="input bg-white" required />
+                        <input type="number" placeholder="Enter Amount" class="input bg-white" required />
                     </div>
                     <div class="form-control">
-                        <label >Pin</span>
+                        <label>Pin Number</span>
                         </label>
                         <input type="Number" placeholder="Enter 4 Digit Pin" class="input bg-white input-bordered"
                             required />
