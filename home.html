@@ -50,7 +50,7 @@
     </header>
 
 
-    <main class="mx-auto space-y-3">
+    <main class="mx-auto space-y-3 min-h-lvh">
         <div class="bg-white p-5 space-y-5">
             <h1 class="text-2xl text-black font-bold">🔥Welcome to Payoo!</h1>
             <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
@@ -109,10 +109,207 @@
             </div>
         </div>
 
-        <!-- payment history  -->
-        <div class="text-black p-5 space-y-4 hidden">
+        
+        <!-- Add Money Section  -->
+        <div class="text-black px-5 pb-5">
+            <h1 class="text-xl font-bold">Add Money</h1>
+
+            <div class="w-full shrink-0 shadow-2xl rounded-xl">
+                <form class="py-4 px-7 space-y-3 text-[#080808B3]">
+
+                    <!-- bank selection  -->
+                    <div class="form-control">
+                        <label>
+                            <span>Select A Bank</span>
+                        </label>
+                        <select class="select select-bordered w-full bg-white">
+                            <option selected disabled>Select Bank</option>
+                            <option>Bkash</option>
+                            <option>Nogod</option>
+                            <option>Rocket</option>
+                        </select>
+                    </div>
+
+                    <!-- account number  -->
+                    <div class="form-control">
+                        <label>Bank Account Number</span>
+                        <input type="number" placeholder="Enter 11 digits of Account number" class="input bg-white w-full" required />
+                    </div>
+
+                    <!-- ammount  -->
+                    <div class="form-control">
+                        <label>
+                            <span>Amount to Add</span>
+                        </label>
+                        <input type="number" placeholder="Enter Amount" class="input bg-white" required />
+                    </div>
+
+                    <!-- pin number  -->
+                    <div class="form-control">
+                        <label>Pin Number</span>
+                        </label>
+                        <input type="Number" placeholder="Enter 4 Digit Pin" class="input bg-white input-bordered"
+                            required />
+                    </div>
+                    <div class="form-control ">
+                        <button class="btn btn-primary text-white">Add Money</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+
+        <!-- Cash Out Section  -->
+        <div class="text-black px-5 pb-5">
+            <h1 class="text-xl font-bold">Cash Out</h1>
+
+            <div class="w-full shrink-0 shadow-2xl rounded-xl">
+                <form class="py-4 px-7 space-y-3 text-[#080808B3]">
+
+                    <!-- agent account number  -->
+                    <div class="form-control">
+                        <label>Agent Account Number</span>
+                        <input type="number" placeholder="Enter 11 digits of Account number" class="input bg-white w-full" required />
+                    </div>
+
+                    <!-- amount   -->
+                    <div class="form-control">
+                        <label>
+                            <span>Amount</span>
+                        </label>
+                        <input type="number" placeholder="Enter Amount" class="input bg-white" required />
+                    </div>
+
+                    <!-- pin  -->
+                    <div class="form-control">
+                        <label>Pin Number</span>
+                        </label>
+                        <input type="Number" placeholder="Enter 4 Digit Pin" class="input bg-white input-bordered"
+                            required />
+                    </div>
+                    <div class="form-control ">
+                        <button class="btn btn-primary text-white">Withdraw Money</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+
+        <!-- Transfer Money Section  -->
+        <div class="text-black px-5 pb-5">
+            <h1 class="text-xl font-bold">Transfer Money</h1>
+
+            <div class="w-full shrink-0 shadow-2xl rounded-xl">
+                <form class="py-4 px-7 space-y-3 text-[#080808B3]">
+
+                    <!-- user account number  -->
+                    <div class="form-control">
+                        <label>User Account Number</span>
+                        <input type="number" placeholder="Enter 11 digits of Account number" class="input bg-white w-full" required />
+                    </div>
+
+                    <!-- amount   -->
+                    <div class="form-control">
+                        <label>
+                            <span>Amount</span>
+                        </label>
+                        <input type="number" placeholder="Enter Amount" class="input bg-white" required />
+                    </div>
+
+                    <!-- pin  -->
+                    <div class="form-control">
+                        <label>Pin Number</span>
+                        </label>
+                        <input type="Number" placeholder="Enter 4 Digit Pin" class="input bg-white input-bordered"
+                            required />
+                    </div>
+                    <div class="form-control ">
+                        <button class="btn btn-primary text-white">Send Money</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+
+        <!-- Get Bonus Section  -->
+        <div class="text-black px-5 pb-5">
+            <h1 class="text-xl font-bold">Transfer Money</h1>
+
+            <div class="w-full shrink-0 shadow-2xl rounded-xl">
+                <form class="py-4 px-7 space-y-3 text-[#080808B3]">
+
+                    <!-- Coupon  -->
+                    <div class="form-control">
+                        <label>Enter Bonus Coupon</span>
+                        <input type="number" placeholder="Enter Bonus Coupon" class="input bg-white w-full" required />
+                    </div>
+
+                    
+                    <div class="form-control ">
+                        <button class="btn btn-primary text-white">Get Bonus</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Pay Bill Section  -->
+        <div class="text-black px-5 pb-5">
+            <h1 class="text-xl font-bold">Pay Bill</h1>
+
+            <div class="w-full shrink-0 shadow-2xl rounded-xl">
+                <form class="py-4 px-7 space-y-3 text-[#080808B3]">
+
+                    <!-- Pay selection  -->
+                    <div class="form-control">
+                        <label>
+                            <span>Select To Pay</span>
+                        </label>
+                        <select class="select select-bordered w-full bg-white">
+                            <option disabled selected>Select</option>
+                            <option>Electric</option>
+                            <option>Water</option>
+                            <option>Gas</option>
+                        </select>
+                    </div>
+
+                    <!-- Biller account number  -->
+                    <div class="form-control">
+                        <label>Biller Account Number</span>
+                        <input type="number" placeholder="Enter 11 digits of Account number" class="input bg-white w-full" required />
+                    </div>
+
+                    <!-- ammount  -->
+                    <div class="form-control">
+                        <label>
+                            <span>Amount to Pay</span>
+                        </label>
+                        <input type="number" placeholder="Enter Amount" class="input bg-white" required />
+                    </div>
+
+                    <!-- pin number  -->
+                    <div class="form-control">
+                        <label>Pin Number</span>
+                        </label>
+                        <input type="Number" placeholder="Enter 4 Digit Pin" class="input bg-white input-bordered"
+                            required />
+                    </div>
+                    <div class="form-control ">
+                        <button class="btn btn-primary text-white">Add Money</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+
+        <!-- Transaction Section  -->
+        <div class="text-black p-5 space-y-4">
             <div class="flex items-center justify-between">
-                <h1 class="text-xl font-bold">Latest Payment</h1>
+                <h1 class="text-xl font-bold">Transaction History</h1>
                 <p class="text-[#08080880] font-semibold"><a href="">View All</a></p>
             </div>
 
@@ -188,48 +385,6 @@
 
             </div>
         </div>
-
-
-        <!-- Add Money Section  -->
-        <div class="text-black px-5">
-            <h1 class="text-xl font-bold">Add Money</h1>
-
-            <div class="w-full shrink-0 shadow-2xl rounded-xl">
-                <form class="py-4 px-7 space-y-3 text-[#080808B3]">
-                    <div class="form-control">
-                        <label>
-                            <span>Select A Bank</span>
-                        </label>
-                        <select class="select select-bordered w-full bg-white">
-                            <option>Bkash</option>
-                            <option>Nogod</option>
-                            <option>Rocket</option>
-                        </select>
-                    </div>
-                    <div class="form-control">
-                        <label>Bank Account Number</span>
-                        <input type="number" placeholder="Enter 11 digits of Account number" class="input bg-white w-full" required />
-                    </div>
-                    <div class="form-control">
-                        <label>
-                            <span>Amount to Add</span>
-                        </label>
-                        <input type="number" placeholder="Enter Amount" class="input bg-white" required />
-                    </div>
-                    <div class="form-control">
-                        <label>Pin Number</span>
-                        </label>
-                        <input type="Number" placeholder="Enter 4 Digit Pin" class="input bg-white input-bordered"
-                            required />
-                    </div>
-                    <div class="form-control ">
-                        <button class="btn btn-primary text-white">Add Money</button>
-                    </div>
-                </form>
-            </div>
-
-        </div>
     </main>
 </body>
-
 </html>
