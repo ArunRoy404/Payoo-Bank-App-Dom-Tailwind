@@ -1,11 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payoo</title>
+
+    <!-- daisyUI with tailwind  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- outfit font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- icon  -->
+    <link rel="shortcut icon" href="assets/payoo.png" type="image/x-icon">
+    <style>
+        .font-outfit{
+            font-family: "Outfit", serif;
+        }
+    </style>
+
 </head>
-<body>
-    
+
+<body class="font-outfit">
+    <main class="max-w-md bg-[#F4F5F7] h-lvh mx-auto flex-col items-center pt-40">
+        <!-- logo  -->
+        <!-- <div class="relative p-12">
+            <img class="absolute left-1/2 top-0 -translate-x-1/2" src="assets/bg.png" alt="">
+            <img class="mx-auto" src="assets/Group.png" alt="">
+        </div> -->
+        <div class="flex justify-center">
+            <img class="absolute" src="assets/bg.png" alt="">
+            <img class="my-10" src="assets/Group.png" alt="">
+        </div>
+
+        <!-- login form  -->
+        <div class="">
+            <div class="hero-content">
+                <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text text-black">Mobile Number</span>
+                            </label>
+                            <input type="number" placeholder="Enter Your Number" class="input bg-white"
+                                required />
+                        </div>
+                        <div class="form-control">
+                            <label class="label text-black">Pin</span>
+                            </label>
+                            <input type="Number" placeholder="Enter 4 Digit Pin" class="input bg-white input-bordered"
+                                required />
+                            <label class="label">
+                                <a href="#" class="text-black label-text-alt link link-hover">Forgot password?</a>
+                            </label>
+                        </div>
+                        <div class="form-control mt-6">
+                            <button class="btn btn-primary text-white">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>
