@@ -1,4 +1,4 @@
-toggle('cash-out')
+toggle('transfer-money')
 
 document.getElementById("card-container").addEventListener("click", function(event) {
     let currentDiv = event.target.closest('button')
