@@ -13,6 +13,7 @@ document.getElementById('cash-out-btn').addEventListener('click',function(event)
             balance -= amount
             console.log(balance)
             setText('balance',balance)
+            setTransaction('Cash Out',amount)
         }else{
             alert('Wrong Credential')
         }

@@ -13,7 +13,7 @@ document.getElementById('add-money-btn').addEventListener('click',function(event
         }else{
             balance += amount
             setText('balance',balance)
-            setTransaction(bank,amount)
+            setTransaction('Add Money',amount)
         }
     }else{
         alert("Wrong Credential")
