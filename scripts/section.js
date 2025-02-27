@@ -1,4 +1,4 @@
-toggle('pay-bill')
+toggle('transaction')
 
 document.getElementById("card-container").addEventListener("click", function(event) {
     let currentDiv = event.target.closest('button')

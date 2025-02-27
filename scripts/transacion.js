@@ -20,5 +20,5 @@ function setTransaction(type, amount){
                 </svg>
         </div>
     `
-    document.getElementById('transaction').appendChild(div)
+    document.getElementById('transaction-container').appendChild(div)
 }
