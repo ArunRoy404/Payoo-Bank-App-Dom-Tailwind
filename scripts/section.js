@@ -1,10 +1,10 @@
-toggle('add-money')
+toggle('transaction')
 
 document.getElementById("card-container").addEventListener("click", function(event) {
-    let currentDiv = event.target.closest('div')
-    while(currentDiv.parentElement.id !== 'card-container'){
-        currentDiv = currentDiv.parentElement;
-    }
+    let currentDiv = event.target.closest('button')
+    // while(currentDiv.parentElement.id !== 'card-container'){
+    //     currentDiv = currentDiv.parentElement;
+    // }
     if(currentDiv.id === 'select-add-money') toggle('add-money')
     if(currentDiv.id === 'select-cash-out') toggle('cash-out')
     if(currentDiv.id === 'select-transfer-money') toggle('transfer-money')
