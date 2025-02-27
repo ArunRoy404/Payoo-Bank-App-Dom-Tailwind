@@ -7,7 +7,7 @@ document.getElementById('transfer-btn').addEventListener('click',function(event)
     const pin = getInputNumberByID('transfer-pin')
 
     if(pin === 1234){
-        if(amount<balance){
+        if(amount<=balance){
             balance -= amount
             setText('balance',balance)
             setTransaction('Transfer Money', amount)

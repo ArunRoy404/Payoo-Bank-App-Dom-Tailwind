@@ -242,6 +242,7 @@
 
             <!-- Get Bonus Section  -->
             <div id="get-bonus" class="text-black px-5 pb-5">
+                
                 <h1 class="text-xl font-bold">Get Bonus</h1>
 
                 <div class="w-full shrink-0 shadow-2xl rounded-xl">
@@ -275,7 +276,7 @@
                             <label>
                                 <span>Select To Pay</span>
                             </label>
-                            <select class="select select-bordered w-full bg-white">
+                            <select id="pay-to" class="select select-bordered w-full bg-white">
                                 <option>Electric</option>
                                 <option>Water</option>
                                 <option>Gas</option>
@@ -285,7 +286,7 @@
                         <!-- Biller account number  -->
                         <div class="form-control">
                             <label>Biller Account Number</span>
-                                <input type="number" placeholder="Enter 11 digits of Account number"
+                                <input id="pay-account" type="number" placeholder="Enter 11 digits of Account number"
                                     class="input bg-white w-full" required />
                         </div>
 
@@ -294,18 +295,18 @@
                             <label>
                                 <span>Amount to Pay</span>
                             </label>
-                            <input type="number" placeholder="Enter Amount" class="input bg-white" required />
+                            <input id="pay-amount" type="number" placeholder="Enter Amount" class="input bg-white" required />
                         </div>
 
                         <!-- pin number  -->
                         <div class="form-control">
                             <label>Pin Number</span>
                             </label>
-                            <input type="Number" placeholder="Enter 4 Digit Pin" class="input bg-white input-bordered"
+                            <input id="pay-pin" type="Number" placeholder="Enter 4 Digit Pin" class="input bg-white input-bordered"
                                 required />
                         </div>
                         <div class="form-control ">
-                            <button class="btn btn-primary text-white">Add Money</button>
+                            <button id="pay-btn" class="btn btn-primary text-white">Pay Now</button>
                         </div>
                     </form>
                 </div>
